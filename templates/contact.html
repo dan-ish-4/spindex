@@ -1,0 +1,60 @@
+{% extends 'basic.html' %}
+{%block head%}<title>Contact</title>{%endblock head%}
+
+{%block body %}
+<div class="text">
+<h1>CONTACT FORM<hr></h1>
+<style>
+    .text{
+        text-align: center;
+        color: grey;
+    }
+    body{
+    background-color:rgba(192,192,192,0.3);
+  }
+</style>
+</div>
+<div class="container mb-3 py-4">
+
+    <form method="POST" action="/contact">
+    {% csrf_token %}
+        <div class="form-group py-4 ">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" name ="name"placeholder="Enter your name">
+        </div>
+        <div class="form-group py-4">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email"  name ="email"placeholder="Enter your Email">
+        </div>
+       <div class="form-group py-4">
+            <label for="phone">phone</label>
+            <input type="type" class="form-control" id="phone" name ="phone"placeholder="Enter your phone number">
+        </div>
+       
+        <div class="form-group py-4">
+            <label for="desc">Tell us about your stock related qurey</label>
+            <textarea class="form-control" id="desc" rows="3" name ="desc"></textarea>
+        </div>
+        <button type = "submit" class="btn btn-success" style="background-color: gray;">submit</button>
+    </form>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}

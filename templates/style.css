@@ -1,0 +1,16 @@
+.navbar.navbar-default{position: absolute;
+    background:black !important;
+    width: 100%;
+    z-index:10 ;
+    border-bottom: 1px solid rgba(255,255, 255,0.3) ;
+  }
+.container{
+    position:absolute;
+    z-index: 1 ;
+    top: 100px ;
+    width: 100%;
+
+}
+#text{
+    color:black;
+}

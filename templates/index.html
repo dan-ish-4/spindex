@@ -1,0 +1,52 @@
+{% extends 'basic.html' %}
+{% block head %} 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Home</title>
+<style>
+    body{
+        
+        background-color:rgba(192,192,192,0.3);
+    
+    }
+    </style>
+  
+{%  endblock head %}
+
+{% block body %}
+
+
+<!--search bar-->
+<div id="bg" class="container mt-3">
+    <h2 style="color:grey">Enter Company Ticker</h2>
+    <form  action="" method="post">
+        {% csrf_token %}
+        <div class="input-group my-2">
+            <input type="text" class="form-control" id="ticker" placeholder="Enter Company Ticker" name="ticker" aria-label="Ticker-Symbol" aria-describedby="button-addon2">
+            <button type="submit" class="btn btn-outline-secondary" id="button-addon2" style="color:black"><i class="material-icons">search
+            </i></button>
+            
+        </div>
+
+<!--carusel -->
+<div style="margin-bottom:-250px !important;margin-left:-111px;margin-right:-112px" id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-item active">
+        <img src="static/1.jpg" height="600 px"class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="static/2.jpg" height="600 px"class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="static/3.jpg"height="600 px" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    
+ {% endblock body %}
